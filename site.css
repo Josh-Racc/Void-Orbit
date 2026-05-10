@@ -1,0 +1,213 @@
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    padding-top: 0;
+    padding-bottom: 0;
+    background: #050506;
+    color: #edeaf3;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.body-content {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+}
+
+.void-orbit-app {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 50% 45%, rgba(105, 71, 153, 0.22), transparent 28rem),
+        linear-gradient(180deg, #08070c 0%, #050506 58%, #090910 100%);
+}
+
+.stage-shell {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+#voidCanvas {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    min-height: 640px;
+    background: #050506;
+}
+
+.hud,
+.control-panel {
+    position: absolute;
+    z-index: 3;
+}
+
+.top-hud {
+    top: 24px;
+    left: 32px;
+    right: 32px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.kicker {
+    margin: 0 0 5px;
+    color: #bfb0d9;
+    font-size: 12px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.top-hud h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(42px, 7vw, 92px);
+    font-weight: 800;
+    line-height: 0.9;
+    text-shadow: 0 0 30px rgba(152, 92, 255, 0.46);
+}
+
+button {
+    border: 1px solid rgba(226, 218, 255, 0.28);
+    border-radius: 6px;
+    background: rgba(22, 18, 31, 0.88);
+    color: #f7f2ff;
+    font-weight: 700;
+    padding: 10px 14px;
+    transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+button:hover,
+button:focus {
+    border-color: rgba(255, 255, 255, 0.68);
+    background: rgba(54, 39, 78, 0.94);
+    color: #ffffff;
+    outline: none;
+    transform: translateY(-1px);
+}
+
+.primary-action {
+    background: #f0edf8;
+    border-color: #ffffff;
+    color: #09070d;
+    box-shadow: 0 0 26px rgba(192, 171, 255, 0.38);
+}
+
+.primary-action:hover,
+.primary-action:focus {
+    background: #ffffff;
+    color: #08070c;
+}
+
+.control-panel {
+    right: 32px;
+    bottom: 78px;
+    width: min(340px, calc(100vw - 48px));
+    padding: 18px;
+    border: 1px solid rgba(229, 223, 255, 0.18);
+    border-radius: 8px;
+    background: rgba(7, 7, 12, 0.76);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.38);
+    backdrop-filter: blur(14px);
+}
+
+.meter-row,
+.button-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.meter-row {
+    margin-top: 12px;
+    color: #d6cee7;
+}
+
+.meter-row:first-child {
+    margin-top: 0;
+}
+
+.meter-row strong {
+    color: #ffffff;
+}
+
+input[type="range"] {
+    width: 100%;
+    max-width: none;
+    accent-color: #b38cff;
+}
+
+.spatial-readout {
+    min-height: 20px;
+    margin-top: 8px;
+    color: #a99fc0;
+    font-size: 12px;
+}
+
+.button-row {
+    margin-top: 18px;
+}
+
+.button-row button {
+    flex: 1;
+    min-height: 42px;
+    padding: 9px 10px;
+}
+
+@media (max-width: 820px) {
+    #voidCanvas {
+        min-height: 720px;
+    }
+
+    .top-hud {
+        left: 18px;
+        right: 18px;
+        flex-direction: column;
+    }
+
+    .control-panel {
+        left: 18px;
+        right: 18px;
+        bottom: 92px;
+        width: auto;
+    }
+
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}

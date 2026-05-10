@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Void Orbit</title>
+    <link rel="stylesheet" type="text/css" href="finalfianlsound/static/content/site.css">
+</head>
+<body>
+    <main class="void-orbit-app" aria-label="Void Orbit horror sequencer">
+        <section class="stage-shell">
+            <canvas id="voidCanvas" width="1280" height="760" aria-label="Black hole orbit sequencer visualization"></canvas>
+
+            <div class="hud top-hud">
+                <div>
+                    <p class="kicker">FM / spatial horror sequencer</p>
+                    <h1>Void Orbit</h1>
+                </div>
+                <button id="startButton" class="primary-action" type="button">Awaken Audio</button>
+            </div>
+
+            <aside class="control-panel" aria-label="Sequencer controls">
+                <div class="meter-row">
+                    <span>Collapse</span>
+                    <strong id="collapseReadout">37%</strong>
+                </div>
+                <input id="collapseSlider" type="range" min="0" max="100" value="37">
+
+                <div class="meter-row">
+                    <span>Dread</span>
+                    <strong id="dreadReadout">64%</strong>
+                </div>
+                <input id="dreadSlider" type="range" min="0" max="100" value="64">
+
+                <div class="meter-row">
+                    <span>Orbit density</span>
+                    <strong id="densityReadout">6 bodies</strong>
+                </div>
+                <input id="densitySlider" type="range" min="3" max="9" value="6">
+
+                <div class="meter-row">
+                    <span>Planet mass</span>
+                    <strong id="massReadout">100%</strong>
+                </div>
+                <input id="massSlider" type="range" min="45" max="180" value="100">
+                <div class="spatial-readout" id="spatialReadout">Spatial field: balanced</div>
+
+                <div class="button-row">
+                    <button id="randomizeButton" type="button">Re-seed System</button>
+                    <button id="panicButton" type="button">Total Collapse</button>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <script src="finalfianlsound/static/scripts/three.min.js"></script>
+    <script src="finalfianlsound/static/scripts/void-orbit.js"></script>
+</body>
+</html>
